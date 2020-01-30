@@ -1,4 +1,4 @@
-# MSPR
+# MSPR 🐱‍🐉
 
 ## Contributors 
 
