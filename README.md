@@ -4,4 +4,4 @@
 
 - Léo Dhédin
 - Andrèa Cicirello
-- Martinez Maxime
+- Allan Arraud
