@@ -6,3 +6,4 @@
 - Andrèa Cicirello
 - Allan Arraud
 - Maxime Martinez
+- Moussa BA
