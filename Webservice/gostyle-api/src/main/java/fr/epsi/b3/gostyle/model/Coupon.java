@@ -1,7 +1,9 @@
 package fr.epsi.b3.gostyle.model;
 
+import java.math.BigDecimal;
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
@@ -9,22 +11,17 @@ import javax.persistence.Id;
 public class Coupon {
 
 	@Id
-	private int couponId;
-	private String codePromotionnel;
+	private String code;
 	private Date dateExpiration;
-	private int tauxReduction;
+	private int taux;
+	private BigDecimal remise;
+	private Boolean status;
 	
-	public int getCouponId() {
-		return couponId;
+	public String getCode() {
+		return code;
 	}
-	public void setCouponId(int couponId) {
-		this.couponId = couponId;
-	}
-	public String getCodePromotionnel() {
-		return codePromotionnel;
-	}
-	public void setCodePromotionnel(String codePromotionnel) {
-		this.codePromotionnel = codePromotionnel;
+	public void setCodePromotionnel(String code) {
+		this.code = code;
 	}
 	public Date getDateExpiration() {
 		return dateExpiration;
@@ -32,20 +29,27 @@ public class Coupon {
 	public void setDateExpiration(Date dateExpiration) {
 		this.dateExpiration = dateExpiration;
 	}
-	public int getTauxReduction() {
-		return tauxReduction;
+	public int getTaux() {
+		return taux;
 	}
-	public void setTauxReduction(int tauxReduction) {
-		this.tauxReduction = tauxReduction;
+	public void setTaux(int taux) {
+		this.taux = taux;
 	}
-
-	
-	
-	
-	
-	
-	
-	
+	public BigDecimal getRemise() {
+		return remise;
+	}
+	public void setRemise(BigDecimal remise) {
+		this.remise = remise;
+	}
+	public void setCode(String code) {
+		this.code = code;
+	}
+	public Boolean getStatus() {
+		return status;
+	}
+	public void setStatus(Boolean status) {
+		this.status = status;
+	}
 	
 	
 }

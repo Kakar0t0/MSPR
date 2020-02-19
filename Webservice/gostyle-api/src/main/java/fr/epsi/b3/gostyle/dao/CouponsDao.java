@@ -11,19 +11,14 @@ import fr.epsi.b3.gostyle.model.Coupon;
 public class CouponsDao {
 
 	@PersistenceContext
-	private EntityManager em;
-
-	public EntityManager getEm() {
-		return em;
-	}
-	
-	
+	private EntityManager em;	
 	
 	/**
 	 * Ajoute un coupon dans la base de données. Si
 	 * le coupon existe déjà il est mit a jour (si nécessaire)
 	 * @param coupon
 	 */
+	
 	public void createOrUpdate(Coupon coupon) {
 		em.merge(coupon);
 	}
@@ -31,20 +26,22 @@ public class CouponsDao {
 	/**
 	 * 
 	 * @param id
-	 * @return Retourne le coupon correspondant a l'id ou null si il n'existe pas
+	 * @return Retourne le coupon correspondant au code (libelle) ou null si il n'existe pas
 	 */
-	public Coupon getById(int id) {
-		return em.find(Coupon.class, id);
+	
+	public Coupon getByCode(String code) {
+		return em.find(Coupon.class, code);
 	}
 	
 	/**
 	 * Supprime de la base de données le coupon correspondant 
-	 * à l'Id fournit.
+	 * au code (libelle) fournit.
 	 * Cette methode est sans effet si le coupon n'existe pas.
 	 * @param id
 	 */
-	public void deleteByCode(int id) {
-		em.createQuery("delete from Coupons c where c.id_coupon = :id").setParameter("id",id).executeUpdate();
+	
+	public void deleteByCode(String code) {
+		em.createQuery("delete from Coupon c where c.code = :code").setParameter("code",code).executeUpdate();
 	}
 	
 }
