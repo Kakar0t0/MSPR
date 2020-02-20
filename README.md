@@ -1,7 +1,8 @@
 # MSPR 🐱‍🐉
 
-## Contributors 
+## Contributeurs
 
+<<<<<<< HEAD
 ## Contributeurs
 
 | Contributeurs    | Rôles                 |
@@ -26,6 +27,13 @@ Une entreprise de vêtements et accessoire nous as contacté pour leur créer un
 ## Rétroplanning
 
 ## Diagramme
+=======
+|Léo Dhédin       |  Webservice            |
+|Andrèa Cicirello |  Test                  |
+|Allan Arraud     |  Liste Coupons         |
+|Maxime Martinez  |  Scanner & Support Git |
+|Moussa BA        |  Login                 |
+>>>>>>> a752917641bac96e34beb084649aa0380296dd83
 
 ## Maquettes de l'application
 
