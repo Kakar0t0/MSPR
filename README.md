@@ -1,12 +1,12 @@
 # MSPR 🐱‍🐉
 
-## Contributors 
+## Contributeurs
 
-- Léo Dhédin
-- Andrèa Cicirello
-- Allan Arraud
-- Maxime Martinez
-- Moussa BA
+|Léo Dhédin       |  Webservice            |
+|Andrèa Cicirello |  Test                  |
+|Allan Arraud     |  Liste Coupons         |
+|Maxime Martinez  |  Scanner & Support Git |
+|Moussa BA        |  Login                 |
 
 ## Maquettes de l'application
 
