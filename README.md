@@ -24,8 +24,8 @@ Une entreprise de vêtements et accessoire nous as contacté pour leur créer un
 ## Rétroplanning
 ![alt text](gantt.png)
 ## Diagramme
-![alt text](DiagrammeContext)
-![alt text](DiagrammePackage)
-![alt text](DiagrammeUtilisation)
+![alt text](DiagrammeContext.jpg)
+![alt text](DiagrammePackage.jpg)
+![alt text](DiagrammeUtilisation.jpg)
 ## Maquettes de l'application
 ![alt text](Maquette_Appli.png)
