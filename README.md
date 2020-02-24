@@ -22,7 +22,7 @@ Une entreprise de vêtements et accessoire nous as contacté pour leur créer un
 * Tomcat
 
 ## Rétroplanning
-
+![alt text](gantt.png)
 ## Diagramme
 
 ## Maquettes de l'application
