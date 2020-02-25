@@ -3,7 +3,13 @@ package fr.epsi.myapplication;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.Manifest;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.util.Patterns;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,8 +25,9 @@ import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
 public class MainActivity extends AppCompatActivity implements ZXingScannerView.ResultHandler {
 
+    public static final String EXTRA_TEXT = "fr.epsi.myapplication.EXTRA_TEXT";
     private ZXingScannerView scannerView;
-    private TextView textView;
+    public static TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -28,7 +35,7 @@ public class MainActivity extends AppCompatActivity implements ZXingScannerView.
         setContentView(R.layout.activity_main);
 
         scannerView = (ZXingScannerView)findViewById(R.id.scanx);
-        textView = (TextView)findViewById(R.id.txt_champ);
+        textView = (TextView)findViewById(R.id.textView);
 
         Dexter.withActivity(this)
                 .withPermission(Manifest.permission.CAMERA)
@@ -48,6 +55,7 @@ public class MainActivity extends AppCompatActivity implements ZXingScannerView.
                     public void onPermissionRationaleShouldBeShown(PermissionRequest permission, PermissionToken token) {
 
                     }
+
                 })
                 .check();
     }
@@ -60,7 +68,14 @@ public class MainActivity extends AppCompatActivity implements ZXingScannerView.
 
     @Override
     public void handleResult(Result rawResult) {
-        textView.setText(rawResult.getText());
-        scannerView.startCamera();
+        /*Intent intent = new Intent(this, CodeListActivity.class);
+        startActivity(intent);*/
+        /*textView.setText(rawResult.getText());
+        scannerView.startCamera();*/
+        if(Patterns.WEB_URL.matcher(rawResult.getText()).matches()) {
+            // Open URL
+            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(rawResult.getText()));
+            startActivity(browserIntent);
+        }
     }
 }
